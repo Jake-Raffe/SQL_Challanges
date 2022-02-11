@@ -69,7 +69,7 @@ SELECT COUNT(id) FROM matches WHERE (ftr, division_code) = ('D', 'N1') AND 2009 
 9) Select the matches played in the Premier League in order of total goals scored from highest to lowest. Where there is a tie the match with more home goals should come first.
 
 ```sql
-<!-- Copy solution here -->
+SELECT * FROM matches WHERE division_code = 'E0' ......
 
 
 ```
@@ -77,7 +77,7 @@ SELECT COUNT(id) FROM matches WHERE (ftr, division_code) = ('D', 'N1') AND 2009 
 10) In which division and which season were the most goals scored?
 
 ```sql
-<!-- Copy solution here -->
+SELECT division_code, season FROM matches GROUP BY division_code, season ORDER BY SUM (fthg) + SUM (ftag) DESC LIMIT 1;
 
 
 ```
